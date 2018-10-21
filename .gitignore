@@ -27,7 +27,9 @@
 ### Example user template
 
 # IntelliJ project files
-.idea
-*.iml
 out
 gen
+src/main/resources/static/
+src/main/resources/templates/
+.mvn/
+mvnw*
