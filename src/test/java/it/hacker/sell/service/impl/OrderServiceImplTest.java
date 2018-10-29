@@ -3,6 +3,7 @@ package it.hacker.sell.service.impl;
 import it.hacker.sell.dto.OrderDTO;
 import it.hacker.sell.entity.OrderDetail;
 import it.hacker.sell.enums.OrderStatusEnum;
+import it.hacker.sell.enums.PayStatusEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -93,6 +94,9 @@ public class OrderServiceImplTest {
 
     @Test
     public void paid() {
+        OrderDTO orderDTO = orderService.findOne(ORDER_ID);
+        OrderDTO result = orderService.paid(orderDTO);
+        Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(), result.getPayStatus());
     }
 
     @Test

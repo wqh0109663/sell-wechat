@@ -29,7 +29,7 @@
 # IntelliJ project files
 out
 gen
-src/main/resources/static/
-src/main/resources/templates/
+#src/main/resources/static/
+#src/main/resources/templates/
 .mvn/
 mvnw*
